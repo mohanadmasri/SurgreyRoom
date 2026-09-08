@@ -1016,7 +1016,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.06, y: 0.24, z: 2.17531}
-  m_LocalScale: {x: 0.8, y: 6, z: 0.8}
+  m_LocalScale: {x: 0.8, y: 12, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d72847711066c45a22fec5b3971756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VehicleControllerVR
-  vehicleModel: {fileID: 0}
+  vehicleModel: {fileID: 1849801152}
   forwardSpeed: 1.5
   horizontalSpeed: 1
   verticalSpeed: 1
@@ -1866,92 +1866,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1001 &1740932117
-PrefabInstance:
+--- !u!1 &1723914142
+GameObject:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723914144}
+  - component: {fileID: 1723914143}
+  m_Layer: 0
+  m_Name: BloodCellSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1723914143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723914142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8994ad094b6a74e94e96062e852bb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodCellSpawner
+  bloodCellPrefab: {fileID: 7733909737436687187, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+  directionReference: {fileID: 533060813}
+  numberOfCells: 12
+  startDistance: 2
+  endDistance: 12
+  horizontalRange: 0.3
+  verticalRange: 0.3
+--- !u!4 &1723914144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723914142}
   serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.64
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.47488
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.75765
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -5635089476420167720, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 5d1e2ca07f8ad444f9bddf1ceacb11d9, type: 2}
-    - target: {fileID: 919132149155446097, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_Name
-      value: RedBloodCell_model
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124419548675745528, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124419548675745528, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124419548675745528, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124419548675745528, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124419548675745528, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124419548675745528, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.31
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3130868001073529844, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7d9fa28108a8c1d4096c1b3f4cf11dd0, type: 3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.55548, y: 0.15, z: 2.07139}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1788309937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,7 +2323,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.06, y: 0.2, z: 2.17531}
-  m_LocalScale: {x: 1, y: 6, z: 1}
+  m_LocalScale: {x: 1, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3087,6 +3052,63 @@ MonoBehaviour:
   m_CameraFloorOffsetObject: {fileID: 1518009674}
   m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 0
+--- !u!1001 &3765084427712692278
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733909737436687187, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: m_Name
+      value: RedBloodCell_model
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3097,6 +3119,7 @@ SceneRoots:
   - {fileID: 167691123}
   - {fileID: 1642827428}
   - {fileID: 1843307517}
-  - {fileID: 1740932117}
+  - {fileID: 3765084427712692278}
   - {fileID: 533060813}
   - {fileID: 927101487}
+  - {fileID: 1723914144}
