@@ -246,6 +246,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &85558273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 85558274}
+  - component: {fileID: 85558275}
+  m_Layer: 0
+  m_Name: BloodClot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &85558274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85558273}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.36, y: 0.65, z: 2.14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &85558275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85558273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2cd492f17025204b9ce098376d21821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodClotSpawner
+  bloodCellPrefab: {fileID: 7733909737436687187, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+  numberOfCells: 35
+  clotRadius: 0
+  pathThickness: 0.08
+  verticalOffset: -0.4
+  minScale: 0.75
+  maxScale: 0.95
+  clearOldChildren: 1
 --- !u!1 &167691118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,7 +1099,7 @@ Transform:
   m_GameObject: {fileID: 533060812}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.94956, y: 0.847, z: 2.64331}
+  m_LocalPosition: {x: -14.06, y: 0.847, z: 2.64331}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1915,7 +1967,7 @@ Transform:
   m_GameObject: {fileID: 1723914142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.55548, y: 0.3, z: 2.07139}
+  m_LocalPosition: {x: -11.29, y: 0.3, z: 2.07139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3082,7 +3134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.67
+      value: -11.9
       objectReference: {fileID: 0}
     - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3143,3 +3195,4 @@ SceneRoots:
   - {fileID: 533060813}
   - {fileID: 927101487}
   - {fileID: 1723914144}
+  - {fileID: 85558274}
