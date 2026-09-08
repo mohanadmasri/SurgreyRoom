@@ -1047,7 +1047,7 @@ Transform:
   m_GameObject: {fileID: 533060812}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.94956, y: 0.78149, z: 2.64331}
+  m_LocalPosition: {x: -4.94956, y: 0.847, z: 2.64331}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1071,6 +1071,10 @@ MonoBehaviour:
   forwardSpeed: 1.5
   horizontalSpeed: 1
   verticalSpeed: 1
+  minSide: -0.2
+  maxSide: 0.2
+  minHeight: -0.15
+  maxHeight: 0.15
 --- !u!1 &927101485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,12 +1900,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BloodCellSpawner
   bloodCellPrefab: {fileID: 7733909737436687187, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
-  directionReference: {fileID: 533060813}
   numberOfCells: 12
   startDistance: 2
   endDistance: 12
-  horizontalRange: 0.3
-  verticalRange: 0.3
+  horizontalRange: 0.2
+  verticalRange: 0.12
+  pathDirection: 1
 --- !u!4 &1723914144
 Transform:
   m_ObjectHideFlags: 0
@@ -3060,6 +3064,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4444875012580482439, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: maxSide
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444875012580482439, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: minSide
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444875012580482439, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: maxHeight
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444875012580482439, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
+      propertyPath: minHeight
+      value: -0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 6926410069653942761, guid: e2a474be6fc1be942bfa8b51c2d6073e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.67

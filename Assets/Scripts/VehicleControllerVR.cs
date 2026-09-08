@@ -11,6 +11,20 @@ public class VehicleControllerVR : MonoBehaviour
     [SerializeField] private float horizontalSpeed = 1f;
     [SerializeField] private float verticalSpeed = 1f;
 
+    [Header("Movement Limits")]
+    [SerializeField] private float minSide = -0.8f;
+    [SerializeField] private float maxSide = 0.8f;
+
+    [SerializeField] private float minHeight = -0.5f;
+    [SerializeField] private float maxHeight = 0.5f;
+
+    private Vector3 startPosition;
+
+    void Start()
+    {
+        startPosition = transform.position;
+    }
+
     void Update()
     {
         if (vehicleModel == null)
@@ -21,7 +35,6 @@ public class VehicleControllerVR : MonoBehaviour
 
         if (Keyboard.current != null)
         {
-            // Left and right
             if (Keyboard.current.aKey.isPressed ||
                 Keyboard.current.leftArrowKey.isPressed)
             {
@@ -34,7 +47,6 @@ public class VehicleControllerVR : MonoBehaviour
                 horizontal = 1f;
             }
 
-            // Up and down
             if (Keyboard.current.wKey.isPressed ||
                 Keyboard.current.upArrowKey.isPressed)
             {
@@ -54,5 +66,25 @@ public class VehicleControllerVR : MonoBehaviour
             vehicleModel.up * vertical * verticalSpeed;
 
         transform.position += movement * Time.deltaTime;
+
+        Vector3 localOffset = transform.position - startPosition;
+
+        float side =
+            Vector3.Dot(localOffset, vehicleModel.right);
+
+        float height =
+            Vector3.Dot(localOffset, vehicleModel.up);
+
+        side = Mathf.Clamp(side, minSide, maxSide);
+        height = Mathf.Clamp(height, minHeight, maxHeight);
+
+        float forward =
+            Vector3.Dot(localOffset, vehicleModel.forward);
+
+        transform.position =
+            startPosition +
+            vehicleModel.forward * forward +
+            vehicleModel.right * side +
+            vehicleModel.up * height;
     }
 }
